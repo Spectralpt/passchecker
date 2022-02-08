@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/main.css">
+{% endblock %}
+
+{% block content %}
+    <h1>A Tua Passe é Segura?</h1>
+    <div class="passcheck">
+        <form action="#" method="post">
+            <p>Palavra-Passe:</p>
+            <input type="text" name="pass">
+            <input type="submit" value="Testar" name="submit">
+        </form>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <div class="alert_{{category}}">
+                    {{msg}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}

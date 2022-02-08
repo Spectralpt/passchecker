@@ -1,0 +1,27 @@
+@font-face {
+    font-family: manrope;
+    src: url(/static/css/fonts/Manrope-ExtraBold.ttf);
+}
+h1{
+    margin-left: 0.5em;
+    font-size: 5em;
+    color: white;
+}
+
+.passcheck{
+    margin-left: 2em;
+}
+
+body{
+    background-color: #586994;
+    font-family: manrope;
+}
+
+.alert_success{
+    margin-left: 2em;
+    color:#36cebc;
+}
+.alert_error{
+    margin-left: 2em;
+    color: #ff6a67;
+}
